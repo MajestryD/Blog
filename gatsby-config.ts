@@ -2,7 +2,7 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `blog`,
+    title: "My First Gatsby Site",
     siteUrl: `https://www.yourdomain.tld`
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -12,8 +12,8 @@ const config: GatsbyConfig = {
   plugins: ["gatsby-plugin-image","gatsby-plugin-sharp","gatsby-plugin-netlify-cms", "gatsby-plugin-sass", "gatsby-plugin-mdx", "gatsby-transformer-remark", {
     resolve: 'gatsby-source-filesystem',
     options: {
-      "name": "pages",
-      "path": "./src/pages/"
+      "name": `blog`,
+      "path": `${__dirname}/blog`
     },
     __key: "pages"
   }]
